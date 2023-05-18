@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry} % Set margins to 1 inch
+\usepackage{graphicx} % Allows including images
+\usepackage{float} % Allows for precise placement of figures
+\usepackage{amsmath} % Allows for math equations
+\usepackage{siunitx} % Allows for SI units
+\usepackage{placeins} % Makes sure images are in their respective sections by \FloatBarrier
+
+\begin{document}
+
+\title{Software Assignment Report\\ \large{Gargi Behera\\EE22BTECH11208}}
+\author{}
+\date{}
+\maketitle
+
+\maketitle
+
+\section*{Objective :}
+The objective of this assignment is to make a Python script that can make a playlist of songs and shuffle them randomly. The songs must be shuffled such that each song in the playlist is played before it gets looped.
+
+\section*{Overview:}
+\begin{itemize}
+    \item Numpy library has been used, which allows us to randomize the songs
+    \item We are playing the songs through GUI.
+    \item Tkintker library has been used in the program to make the window.
+    \item PyGame library has been used to play audio files.
+    \item os module has been used to search file directory (cwd/songs) by default.
+\end{itemize}
+
+
+
+
+\section*{Working:}
+\begin{itemize}
+    \item shuffle function in the program randomizes the order of the music files.
+    \item Because the function only randomizes the order, there is no repetition of songs in the playlist.
+    \item File managing is done completely through os module functions.
+    \item Audio file playback is handled entirely through PyGame module functions. Pygame mixer is also used.
+\end{itemize}
+
+\subsection*{Shuffle function}
+\begin{itemize}
+    \item It replaces two elements with the second element to be replaced taken from randint function of numpy.random.
+    \item As it replaces the elements, there is no repetition in the playlist.
+    \item This function is executed whenever the playlist reaches the last song and user presses next song button.
+\end{itemize}
+
+\section*{Libraries used :}
+\begin{enumerate}
+    \item Pygame
+    \item Random
+    \item os
+    \item tkinker
+\end{enumerate}
+
+\end{document}
