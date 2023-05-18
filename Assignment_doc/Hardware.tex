@@ -1,0 +1,85 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry} % Set margins to 1 inch
+\usepackage{graphicx} % Allows including images
+\usepackage{float} % Allows for precise placement of figures
+\usepackage{amsmath} % Allows for math equations
+\usepackage{siunitx} % Allows for SI units
+\usepackage{placeins} % Makes sure images are in their respective sections by \FloatBarrier
+
+\begin{document}
+
+\title{Hardware Assignment Report\\ \large{Gargi Behera\\EE22BTECH11208}}
+\author{}
+\date{}
+\maketitle
+
+\maketitle
+
+\section*{Description}
+
+\subsection*{Circuit Overview}
+\begin{enumerate}
+    \item Flip flops 7474 This device contains two independent positive-edge-triggered D-type flip-flops with complementary outputs.The information on the D input is accepted by the flip-flops on the positive going edge of the clock pulse.The Flip-flops take the clock from the clock bus and, based on their initial state, output a sequence of numbers.
+    \item The sequence is fixed, and if the circuit is operated without concern for the initial state, the output number shown is generated randomly from 1 to 15 (both inclusive), with equal probability of all of them.
+    \item The 7 Segment Decoder using IC 7447 is generally used as numerical indicators and consists of several LEDs arranged in seven segments. The decoder can show numbers from 0 to 15, and the ABCD formed by the flip-flops do not become 0000 at any time.
+    \item This circuit is deterministic, hence, the randomness can be decoded by simply referring to the sequence.
+    the sequence generated is 3,7,15,14,13,10,5,11,6,12,9,2,4,8,1,3,7...
+    \item The output repeats after all 16 numbers are shown. 
+\end{enumerate}
+\subsubsection*{Timer}
+\begin{enumerate}
+    \item The time period of the display can be changed using different values of Resistor and Capacitor.
+    \item A 10M$\Omega$ resistor and 47nF and 470nF capacitors are used in the project.
+    \item This allows us to get a square pulse of 5V every 0.9 seconds. Which is slow enough to allow us to take readings from the resistor.
+\end{enumerate}
+
+ 
+
+\section*{Components}
+\begin{enumerate}
+    \item Breadboard
+    \item Seven Segment Display - Common Anode
+    \item 7447 Seven Segment Display Decoder
+    \item 7474 D Flip-Flop x2
+    \item 7486 XOR gate
+    \item 555 precision timer
+    \item Resistor 10M$\Omega$
+    \item Resistor 1K$\Omega$
+    \item Capacitor 47nF
+    \item Capacitor 470nF
+    \item USB micro B breakout board
+    \item Jumper wires
+\end{enumerate}
+
+\section*{Practical Observations}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{"hwfig2.jpg"}
+	\caption{Circuit}
+	\label{fig:view}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{"hwfig3.jpg"}
+	\caption{Circuit with power source}
+	\label{fig:view}
+\end{figure}
+\FloatBarrier
+
+\FloatBarrier
+
+\section*{Block Diagram}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"circuit.png"}
+	\caption{Block Diagram}
+	\label{fig:view}
+\end{figure}
+\FloatBarrier
+
+
+\end{document}
